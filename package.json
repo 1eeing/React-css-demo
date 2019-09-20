@@ -31,8 +31,18 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "fibers": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
     "react-hot-loader": "^4.12.13",
+    "sass": "^1.22.12",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
@@ -42,6 +52,8 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.1",
     "styled-components": "^4.3.2"
   }
 }

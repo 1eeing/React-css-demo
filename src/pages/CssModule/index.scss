@@ -1,0 +1,14 @@
+@import '~@commonStyle/index.scss';
+
+.button {
+  // @extend .ptb10;
+  // @extend .plr20;
+  composes: ptb10;
+  composes: plr20;
+  background-color: red;
+  color: #fff;
+}
+
+:global(.text) {
+  color: yellow;
+}

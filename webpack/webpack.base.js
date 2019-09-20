@@ -4,17 +4,16 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: path.join(__dirname, '../src/index'),
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@commonStyle': path.join(__dirname, '../src/commonStyle/'),
+    }
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: /node_moduels/,
-      }, {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
         exclude: /node_moduels/,
       }
     ]

@@ -21,8 +21,35 @@ module.exports = webpackMerge(baseConfig, {
     hot: true,
     inline: true,
     overlay: {
-        errors: true
+      errors: true
     }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            },
+          }
+        }],
+        exclude: /node_moduels/,
+      }, {
+        test: /\.scss$/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            },
+          }
+        }, 'sass-loader'],
+        exclude: /node_moduels/,
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin({
@@ -30,7 +57,7 @@ module.exports = webpackMerge(baseConfig, {
       verbose: true
     }),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('development')
     }),
   ]
 });

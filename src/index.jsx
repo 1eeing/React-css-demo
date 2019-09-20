@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import App from './App';
+import App from './routers/App';
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-        <Component />
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   )
@@ -15,8 +15,8 @@ const render = (Component) => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
+  module.hot.accept('./routers/App', () => {
+    const NextApp = require('./routers/App').default;
     render(NextApp);
   })
 }
