@@ -7,8 +7,17 @@ const Button = styled.button`
   background-color: red;
 `;
 
+const Button2 = styled.button`
+  color: #fff;
+  padding: 10px 20px;
+  background-color: red;
+`;
+
 const StyledDemo = () => (
-  <Button>Click it, This is render by styled-components</Button>
+  <div>
+    <Button>Click it, This is render by styled-components</Button>
+    <Button2>Click it, This is Button2</Button2>
+  </div>
 );
 
 export default StyledDemo;
